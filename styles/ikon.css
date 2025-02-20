@@ -1,0 +1,78 @@
+/* Mendefinisikan font ikonik Linearicons */
+@font-face {
+    font-family: 'Linearicons-Free';
+    src: url('../fonts/Linearicons-Free.eot?w118d');
+    src: url('../fonts/Linearicons-Free.eot?#iefixw118d') format('embedded-opentype'),
+         url('../fonts/Linearicons-Free.woff2?w118d') format('woff2'),
+         url('../fonts/Linearicons-Free.woff?w118d') format('woff'),
+         url('../fonts/Linearicons-Free.ttf?w118d') format('truetype'),
+         url('../fonts/Linearicons-Free.svg?w118d#Linearicons-Free') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Mengatur class dasar untuk ikon */
+.lnr {
+    font-family: 'Linearicons-Free'; /* Menggunakan font Linearicons */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Perbaikan rendering font untuk tampilan yang lebih tajam */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Menghindari ikon terbaca oleh pembaca layar */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Mendefinisikan ikon berdasarkan Unicode yang telah ditentukan */
+.lnr-home:before {
+    content: "\e800"; /* Ikon rumah */
+}
+.lnr-apartment:before {
+    content: "\e801"; /* Ikon gedung apartemen */
+}
+.lnr-pencil:before {
+    content: "\e802"; /* Ikon pensil */
+}
+.lnr-magic-wand:before {
+    content: "\e803"; /* Ikon tongkat sihir */
+}
+.lnr-cloud-upload:before {
+    content: "\e80a"; /* Ikon unggah ke cloud */
+}
+.lnr-cloud-download:before {
+    content: "\e80b"; /* Ikon unduh dari cloud */
+}
+.lnr-lock:before {
+    content: "\e80f"; /* Ikon gembok */
+}
+.lnr-cog:before {
+    content: "\e810"; /* Ikon roda pengaturan */
+}
+.lnr-trash:before {
+    content: "\e811"; /* Ikon tempat sampah */
+}
+.lnr-user:before {
+    content: "\e82a"; /* Ikon pengguna */
+}
+.lnr-cart:before {
+    content: "\e82e"; /* Ikon keranjang belanja */
+}
+.lnr-phone:before {
+    content: "\e831"; /* Ikon telepon */
+}
+.lnr-map-marker:before {
+    content: "\e833"; /* Ikon penanda lokasi */
+}
+.lnr-calendar-full:before {
+    content: "\e836"; /* Ikon kalender */
+}
+.lnr-envelope:before {
+    content: "\e818"; /* Ikon amplop untuk pesan/email */
+}
