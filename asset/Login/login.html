@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <body> 
-  </body>
+<html lang="id" class="no-js">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ChemsBatik Login</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/fav.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/page.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login ChemsBatik</h2>
+        
+        <form action="contact_process.php" method="post">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+            </div>
+
+            <div class="input-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Ingat saya</label>
+            </div>
+
+            <button type="submit">Log In</button>
+
+            <a href="Lupapassword.html" class="link">Lupa kata sandi?</a>
+            <a href="Daftar.html" class="link">Buat akun baru</a>
+        </form>
+    </div>
+</body>
+
 </html>
