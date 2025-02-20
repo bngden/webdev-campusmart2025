@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles\ikon.css">
+    <title>Halaman Pendaftaran</title>
+    <link rel="stylesheet" href="/styles/page.css">
+    <link rel="stylesheet" href="/styles/ikon.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+<body>
 
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="/img/logo lomba.png" alt="Logo"> <!-- Ganti dengan logo Anda -->
+        <div class="nav-links">
+            <a href="#">BERANDA</a>
+            <a href="#">PRODUK</a>
+            <a href="#" class="active">AKUN</a>
+            <a href="#">KONTAK</a>
+        </div>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </nav>
+
+    <!-- Kontainer Utama -->
+    <div class="container">
+        <!-- Bagian Gambar -->
+        <div class="image-section">
+            <img src="/img/meja.jpg" alt="gambar produk">
+            <div class="image-text">
+                <h2>Campus Mart</h2>
+                <b><p>Barang Bekas, Manfaat Tak Terbatas!</p></b> <br>
+            </div>
+        </div>
+
+        <!-- Form Pendaftaran -->
+        <div class="form-section">
+            <h2>PENDAFTARAN</h2>
+            <form>
+                <div class="input-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan email Anda" required>
+                </div>
+                <div class="input-group">
+                    <label for="telepon">Nomor Telepon</label>
+                    <input type="tel" id="telepon" placeholder="Masukkan nomor telepon" required>
+                </div>
+                <div class="input-group">
+                    <label for="tanggal">Tanggal Lahir</label>
+                    <input type="date" id="tanggal" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit">DAFTAR SEKARANG</button>
+            </form>
+        </div>
+    </div>
+
+</body>
 </html>
