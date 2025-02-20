@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="id" class="no-js">
+<html lang="id">
 
 <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Campus Mart Login</title>
+    <title>Login CAMPUS MART</title>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/logo lomba.png">
@@ -15,30 +14,31 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Login ChemsBatik</h2>
-        
-        <form action="contact_process.php" method="post">
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Masukkan username" required>
-            </div>
-
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Masukkan password" required>
-            </div>
-
-            <div class="input-group">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Ingat saya</label>
-            </div>
-
-            <button type="submit">Log In</button>
-
-            <a href="Lupapassword.html" class="link">Lupa kata sandi?</a>
-            <a href="Daftar.html" class="link">Buat akun baru</a>
-        </form>
+    <div class="login-container">
+        <div class="banner">
+            <h1>Campus Mart</h1>
+            <p>Pusat toko batik kimia</p>
+            <a href="Daftar.html" class="btn-register">Buat Akun Baru</a>
+        </div>
+        <div class="login-form">
+            <h2>Login Pengguna</h2>
+            <form action="contact_process.php" method="post">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Ingat saya</label>
+                </div>
+                <button type="submit">Log In</button>
+                <a href="Lupapassword.html" class="link">Lupa kata sandi?</a>
+            </form>
+        </div>
     </div>
 </body>
 
