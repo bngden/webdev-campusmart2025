@@ -1,22 +1,64 @@
-/* Filename: auth_styles.css */
 
-/* Reset dasar */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     background-color: #1ba0e2;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 
-.container {
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav-links a.active {
+    color: #fabc03;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Login Container */
+.login-container {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
@@ -24,10 +66,15 @@ body {
     width: 100%;
     max-width: 400px;
     text-align: center;
+    margin-top: 80px;
+}
+
+h1 {
+    color: black;
 }
 
 h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: #1ba0e2;
 }
 
@@ -50,6 +97,13 @@ h2 {
     border-radius: 5px;
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
 button {
     width: 100%;
     padding: 10px;
@@ -59,15 +113,21 @@ button {
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #d99a02;
 }
 
-.link {
-    display: block;
+.link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin-top: 10px;
+}
+
+.link {
     font-size: 0.9rem;
     color: #1ba0e2;
     text-decoration: none;
@@ -76,13 +136,3 @@ button:hover {
 .link:hover {
     text-decoration: underline;
 }
-.login-container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-}
-
