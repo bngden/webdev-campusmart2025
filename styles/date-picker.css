@@ -1,0 +1,29 @@
+/* CSS untuk Date Picker dengan Ikon Kalender */
+.date-picker {
+    position: relative;
+    width: 100%;
+}
+
+.date-picker input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding-right: 40px; /* Beri ruang untuk ikon */
+    cursor: pointer;
+}
+
+.date-picker .calendar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+    pointer-events: none; /* Agar ikon tidak menghalangi klik input */
+}
+
+.date-picker .calendar-icon:hover {
+    color: #1ba0e2;
+}

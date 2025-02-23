@@ -1,4 +1,4 @@
-
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +7,13 @@
 }
 
 body {
-    background-color: #1ba0e2;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 80px;
 }
 
 /* Navbar Styling */
@@ -22,12 +23,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 50px;
+    padding: 15px 50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    height: 70px;
 }
 
 .navbar img {
@@ -44,38 +46,43 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .nav-links a.active {
     color: #fabc03;
 }
 
-.nav-icons {
-    display: flex;
-    gap: 15px;
-    font-size: 20px;
-    cursor: pointer;
+.nav-links a:hover {
+    color: #1ba0e2; /* Warna biru saat hover */
 }
 
-/* Login Container */
-.login-container {
+/* Login, Register, and Forgot Password Container */
+.auth-container {
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 768px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 20px;
 }
 
-h1 {
-    color: black;
-}
-
-h2 {
+.auth-container h1 {
+    color: #1ba0e2; /* Warna biru untuk judul */
     margin-bottom: 1rem;
-    color: #1ba0e2;
+}
+
+.auth-container p {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .input-group {
@@ -87,14 +94,22 @@ h2 {
     display: block;
     font-size: 0.9rem;
     color: #555;
+    margin-bottom: 5px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #1ba0e2; /* Warna biru saat focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(27, 160, 226, 0.5); /* Efek glow saat focus */
 }
 
 .checkbox-group {
@@ -102,22 +117,23 @@ h2 {
     align-items: center;
     gap: 10px;
     font-size: 0.9rem;
+    color: #555;
 }
 
 button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    background-color: #fabc03;
+    background: linear-gradient(to right, #fabc03, #f89808);
     color: white;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #d99a02;
+    background: linear-gradient(to right, #f89808, #fabc03); /* Efek hover pada tombol */
 }
 
 .link-container {
@@ -131,8 +147,91 @@ button:hover {
     font-size: 0.9rem;
     color: #1ba0e2;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .link:hover {
+    color: #d99a02; /* Warna kuning saat hover */
     text-decoration: underline;
+}
+
+/* Footer Area */
+.footer-area {
+    background-color: #333;
+    color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.single-footer-widget {
+    margin-bottom: 20px;
+}
+
+.single-footer-widget h6 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.single-footer-widget p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #1ba0e2;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer-text a {
+    color: #1ba0e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-text a:hover {
+    color: #d99a02;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .auth-container {
+        padding: 1.5rem;
+    }
+
+    .footer-area {
+        padding: 30px 0;
+    }
 }
