@@ -1,237 +1,400 @@
 /* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding-top: 80px;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 80px;
 }
 
 /* Navbar Styling */
 .navbar {
-    width: 100%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    height: 70px;
+  width: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 70px;
 }
 
 .navbar img {
-    height: 50px;
+  height: 50px;
 }
 
 .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-links a.active {
-    color: #fabc03;
+  color: #fabc03;
 }
 
 .nav-links a:hover {
-    color: #1ba0e2; /* Warna biru saat hover */
+  color: #1ba0e2; /* Warna biru saat hover */
 }
 
 /* Login, Register, and Forgot Password Container */
 .auth-container {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 768px;
-    text-align: center;
-    margin-top: 20px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 768px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .auth-container h1 {
-    color: #1ba0e2; /* Warna biru untuk judul */
-    margin-bottom: 1rem;
+  color: #1ba0e2; /* Warna biru untuk judul */
+  margin-bottom: 1rem;
 }
 
 .auth-container p {
-    color: #555;
-    margin-bottom: 1.5rem;
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
 .auth-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .input-group {
-    margin-bottom: 1rem;
-    text-align: left;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .input-group label {
-    display: block;
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 5px;
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
 }
 
 .input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 .input-group input:focus {
-    border-color: #1ba0e2; /* Warna biru saat focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(27, 160, 226, 0.5); /* Efek glow saat focus */
+  border-color: #1ba0e2; /* Warna biru saat focus */
+  outline: none;
+  box-shadow: 0 0 5px rgba(27, 160, 226, 0.5); /* Efek glow saat focus */
 }
 
 .checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-    color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: linear-gradient(to right, #fabc03, #f89808);
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(to right, #fabc03, #f89808);
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(to right, #f89808, #fabc03); /* Efek hover pada tombol */
+  background: linear-gradient(
+    to right,
+    #f89808,
+    #fabc03
+  ); /* Efek hover pada tombol */
 }
 
 .link-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .link {
-    font-size: 0.9rem;
-    color: #1ba0e2;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  font-size: 0.9rem;
+  color: #1ba0e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .link:hover {
-    color: #d99a02; /* Warna kuning saat hover */
-    text-decoration: underline;
+  color: #d99a02; /* Warna kuning saat hover */
+  text-decoration: underline;
 }
 
 /* Footer Area */
 .footer-area {
-    background-color: #333;
-    color: #ffffff;
-    padding: 50px 0;
-    text-align: center;
-    margin-top: 50px;
+  background-color: #333;
+  color: #ffffff;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .single-footer-widget {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .single-footer-widget h6 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .single-footer-widget p {
-    font-size: 14px;
-    color: #ccc;
-    margin-bottom: 15px;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .footer-social a {
-    color: #ffffff;
-    font-size: 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social a:hover {
-    color: #1ba0e2;
-    transform: translateY(-5px);
+  color: #1ba0e2;
+  transform: translateY(-5px);
 }
 
 .footer-bottom {
-    background-color: #222;
-    padding: 10px 0;
-    text-align: center;
-    border-top: 1px solid #444;
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+  border-top: 1px solid #444;
 }
 
 .footer-text {
-    font-size: 14px;
-    color: #ccc;
-    margin: 0;
-    line-height: 1.6;
+  font-size: 14px;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .footer-text a {
-    color: #1ba0e2;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #1ba0e2;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-text a:hover {
-    color: #d99a02;
+  color: #d99a02;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-    }
+  .navbar {
+    padding: 15px 20px;
+  }
 
-    .auth-container {
-        padding: 1.5rem;
-    }
+  .auth-container {
+    padding: 1.5rem;
+  }
 
-    .footer-area {
-        padding: 30px 0;
-    }
+  .footer-area {
+    padding: 30px 0;
+  }
+}
+
+/* Style Untuk Berandaa */
+.hero * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vh;
+  height: 100vh; /* Sesuaikan tinggi */
+  background-color: #f8f8f8e0;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.content {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 80px;
+}
+
+/* Teks */
+.container-tag {
+  max-width: 50%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.container-tag h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container-tag span {
+  color: #1ba0e2;
+}
+
+.container-tag p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn-produk {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #1ba0e2;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: background 0.3s ease;
+}
+
+.btn-produk:hover {
+  background-color: #007bb5;
+}
+
+/* Gambar */
+.container-img {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  padding-left: 70px;
+  transform: translateX(50px);
+  animation: fadeInRight 1s ease-out 0.5s forwards;
+}
+
+.container-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Animasi */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  /* Tablet */
+  .hero {
+    padding: 30px;
+  }
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container-tag {
+    max-width: 80%;
+    transform: translateY(-30px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  .container-img {
+    justify-content: center;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .hero {
+    height: auto;
+    padding: 20px;
+  }
+  .container-tag {
+    max-width: 100%;
+  }
+  .container-img img {
+    max-width: 80%;
+  }
+}
+
+/* Tambahan animasi masuk dari bawah */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
