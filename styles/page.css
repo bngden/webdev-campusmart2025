@@ -54,7 +54,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #1ba0e2; /* Warna biru saat hover */
+  color: #fabc03; /* Warna biru saat hover */
 }
 
 /* Login, Register, and Forgot Password Container */
@@ -75,7 +75,7 @@ body {
 }
 
 .auth-container p {
-  color: #555;
+  color: #fabc03;
   margin-bottom: 1.5rem;
 }
 
@@ -102,7 +102,7 @@ body {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   transition: border-color 0.3s ease;
 }
 
@@ -116,7 +116,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: #555;
 }
 
@@ -166,6 +166,8 @@ button:hover {
   padding: 50px 0;
   text-align: center;
   margin-top: 50px;
+  width: 100%;
+  height: 50%;
 }
 
 .single-footer-widget {

@@ -73,6 +73,4 @@
 .lnr-calendar-full:before {
     content: "\e836"; /* Ikon kalender */
 }
-.lnr-envelope:before {
-    content: "\e818"; /* Ikon amplop untuk pesan/email */
-}
+
