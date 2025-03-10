@@ -8,7 +8,8 @@
     />
     <title>Login Campus Mart</title>
     <link rel="stylesheet" href="/styles/page.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/produk.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -57,48 +58,171 @@
       </form>
     </div>
 
-    <!-- Footer Area -->
-    <footer class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="single-footer-widget">
-              <h6>Tentang Kami</h6>
-              <p>
-                Campus Mart adalah platform jual-beli online yang dibuat khusus <br>
-                untuk mahasiswa yang ingin menjual barang yang sudah tidak 
-                terpakai tetapi masih memiliki nilai guna/layak pakai.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="single-footer-widget mail-chimp">
-              <h6 class="mb-20">Pembayaran</h6>
-              <ul class="instafeed d-flex">
-                <li><img src="/img/tam1.jpg" alt="" /></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 col-sm-6">
-            <div class="single-footer-widget">
-              <h6>Media Sosial</h6>
-              <p>Ikuti Kami</p>
-              <div class="footer-social d-flex align-items-center">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+          <!-- About Section -->
+          <div class="footer-section about-section">
+              <h3>Tentang Campus Mart</h3>
+              <p>Campus Mart adalah platform jual-beli online yang dibuat khusus untuk mahasiswa yang ingin menjual barang yang sudah tidak terpakai tetapi masih memiliki nilai guna/layak pakai.</p>
+              <div class="social-icons">
+                  <a href="#"><i data-feather="facebook"></i></a>
+                  <a href="#"><i data-feather="twitter"></i></a>
+                  <a href="#"><i data-feather="instagram"></i></a>
+                  <a href="#"><i data-feather="youtube"></i></a>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <p class="footer-text">
-            Campus Mart &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            Website Campus Mart
+          
+          <!-- Quick Links Section -->
+          <div class="footer-section links-section">
+              <h3>Link Cepat</h3>
+              <ul>
+                  <li><a href="beranda.html"><i data-feather="chevron-right"></i> Beranda</a></li>
+                  <li><a href="produk.html"><i data-feather="chevron-right"></i> Produk</a></li>
+                  <li><a href="login.html"><i data-feather="chevron-right"></i> Akun</a></li>
+                  <li><a href="kontak.html"><i data-feather="chevron-right"></i> Kontak</a></li>
+                  </ul>
+          </div>
+          
+          <!-- Contact Section -->
+          <div class="footer-section contact-section">
+              <h3>Hubungi Kami</h3>
+              <div class="contact-item">
+                  <i data-feather="map-pin"></i>
+                  <!-- <span>Jl. Kampus Baru No. 123, Yogyakarta, Indonesia</span>
+               -->
+                  <span>
+                      <a href="https://goo.gl/maps/sKHTsvF1Ukx" 
+                          target="_blank" 
+                          class="contact-link">
+                          Jl. Siliwangi (Ringroad Utara), Jombor, Sleman, D.I. Yogyakarta 55285
+                      </a>
+                  </span>
+              </div>
+              <div class="contact-item">
+                  <i data-feather="phone"></i>
+                  <span>+62 812 3456 7890</span>
+              </div>
+              <div class="contact-item">
+                  <i data-feather="mail"></i>
+                  <span>info@campusmart.id</span>
+              </div>
+              <div class="contact-item">
+                  <i data-feather="clock"></i>
+                  <span>Senin - Jumat: 09:00 - 17:00</span>
+              </div>
+          </div>
+          
+          <!-- Newsletter Section -->
+          <div class="footer-section newsletter-section">
+              <h3>Berlangganan</h3>
+              <p>Dapatkan info terbaru dan promo spesial dari CampusMart langsung ke email Anda.</p>
+              <form>
+                  <input type="email" placeholder="Email Anda" required>
+                  <button type="submit">Berlangganan</button>
+              </form>
+          </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+          <p>&copy; 2025 CampusMart | Semua Hak Dilindungi | Dari Mahasiswa, Oleh
+              Mahasiswa, Untuk Mahasiswa</p>
+      </div>
+  </footer>
+
+  <script>
+      // Initialize Feather icons
+      document.addEventListener('DOMContentLoaded', function() {
+          feather.replace();
+          
+          let currentSlide = 0;
+          const slideCount = slides.length;
+          
+          // Set up automatic carousel
+          let autoSlideInterval = setInterval(nextSlide, 2000);
+          
+          // Function to update slide position
+          function updateSlidePosition() {
+              carousel.style.transform = `translateX(-${currentSlide * 20}%)`;
+              
+              // Update active dot
+              dots.forEach((dot, index) => {
+                  dot.classList.toggle('active', index === currentSlide);
+              });
+          }
+          
+          // Function for next slide
+          function nextSlide() {
+              currentSlide = (currentSlide + 1) % slideCount;
+              updateSlidePosition();
+          }
+          
+          // Function for previous slide
+          function prevSlide() {
+              currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+              updateSlidePosition();
+          }
+          
+          // Event listeners for buttons
+          prevBtn.addEventListener('click', function() {
+              clearInterval(autoSlideInterval);
+              prevSlide();
+              autoSlideInterval = setInterval(nextSlide, 2000);
+          });
+          
+          nextBtn.addEventListener('click', function() {
+              clearInterval(autoSlideInterval);
+              nextSlide();
+              autoSlideInterval = setInterval(nextSlide, 2000);
+          });
+          
+          // Event listeners for dots
+          dots.forEach((dot, index) => {
+              dot.addEventListener('click', function() {
+                  clearInterval(autoSlideInterval);
+                  currentSlide = index;
+                  updateSlidePosition();
+                  autoSlideInterval = setInterval(nextSlide, 2000);
+              });
+          });
+          
+          // Pause carousel on hover
+          carousel.addEventListener('mouseenter', function() {
+              clearInterval(autoSlideInterval);
+          });
+          
+          carousel.addEventListener('mouseleave', function() {
+              autoSlideInterval = setInterval(nextSlide, 2000);
+          });
+          
+          // Set up pagination
+          const paginationBtns = document.querySelectorAll('.pagination-btn');
+          paginationBtns.forEach((btn, index) => {
+              btn.addEventListener('click', function() {
+                  if (index < paginationBtns.length - 1) {
+                      paginationBtns.forEach(b => b.classList.remove('active'));
+                      btn.classList.add('active');
+                  }
+              });
+          });
+          
+          // Wishlist button color toggle
+          const wishlistBtns = document.querySelectorAll('.wishlist-btn');
+          wishlistBtns.forEach(btn => {
+              btn.addEventListener('click', function() {
+                  const icon = this.querySelector('svg');
+                  if (icon.getAttribute('fill') === 'none' || !icon.hasAttribute('fill')) {
+                      icon.setAttribute('fill', '#f44336');
+                      icon.setAttribute('stroke', '#f44336');
+                  } else {
+                      icon.setAttribute('fill', 'none');
+                      icon.setAttribute('stroke', 'currentColor');
+                  }
+              });
+          });
+      });
+      </script>
           </p>
         </div>
       </div>
