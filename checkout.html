@@ -3,9 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/checkout.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <title>Checkout</title>
+</head>
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="/img/Campus Mart.jpg" alt="Logo" />
+        <div class="nav-links">
+            <a href="beranda.html">BERANDA</a>
+            <a href="produk.html">PRODUK</a>
+            <a href="login.html">AKUN</a>
+            <a href="kontak.html">KONTAK</a>
+        </div>
+    </nav>
+
+    <!-- Checkout Container -->
+    <div class="checkout-container">
+        <div class="checkout-summary">
+            <h2>Ringkasan Pesanan</h2>
+            
+            <div class="checkout-summary-item">
+                <div id="product-container">
+                    <!-- Product will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <div class="total-section">
+                <div class="checkout-summary-item" style="font-weight: bold;">
+                    <span>Total</span>
+                    <span id="total">Rp 0</span>
+                </div>
+                <button class="checkout-btn" id="whatsappBtn">Lanjutkan Pembayaran</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get product details from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productName = urlParams.get('name') || 'Laptop ASUS ROG';
+            const productPrice = urlParams.get('price') || 'Rp 5.500.000';
+            const productImage = urlParams.get('image') || '/img/product7.jpg';
+            const quantity = urlParams.get('quantity') || '1';
+            
+            // Fixed transaction numbers based on the exact ordering you specified
+            const productTransactionMap = {
+                'Meja Lipat': 'CM-001',
+                'Magic Com': 'CM-002',
+                'Kasur Lipat': 'CM-003',
+                'Bantal': 'CM-004',
+                'Karpet Plastik': 'CM-005',
+                'Tas Selempang': 'CM-006',
+                'Laptop ASUS ROG': 'CM-007',
+                'Samsung Galaxy S21': 'CM-008',
+                'Canon EOS 600D': 'CM-009',
+                'Sepeda Polygon': 'CM-010'
+            };
+            
+            // Get transaction number for current product or generate a fallback
+            let transactionNumber = productTransactionMap[productName];
+            if (!transactionNumber) {
+                // If product not in the predefined list, assign a new number
+                const nextNum = Object.keys(productTransactionMap).length + 1;
+                transactionNumber = `CM-${nextNum.toString().padStart(3, '0')}`;
+            }
+            
+            // Convert price string to number for calculations
+            const priceNumeric = parseInt(productPrice.replace(/[^\d]/g, ''));
+            const totalCost = priceNumeric;
+            
+            // Insert product details with new layout
+            document.getElementById('product-container').innerHTML = `
+                <div class="product-image-container">
+                    <img src="${productImage}" alt="${productName}">
+                </div>
+                
+                <div class="info-divider"></div>
+                
+                <div class="product-info">
+                    <div class="transaction-number">Nomor Transaksi: ${transactionNumber}</div>
+                    
+                    <div class="product-info-item">
+                        <span>Produk:</span>
+                        <span>${productName}</span>
+                    </div>
+                    
+                    <div class="product-info-item">
+                        <span>Harga:</span>
+                        <span>${productPrice}</span>
+                    </div>
+                    
+                    <div class="product-info-item">
+                        <span>Jumlah:</span>
+                        <span>${quantity}x</span>
+                    </div>
+                </div>
+            `;
+            
+            // Update total
+            document.getElementById('total').textContent = `Rp ${totalCost.toLocaleString('id-ID')}`;
+            
+            // Setup WhatsApp checkout
+            document.getElementById('whatsappBtn').addEventListener('click', function() {
+                const phoneNumber = '6285642504281'; // Change to your WhatsApp number
+                const message = `Halo, saya ingin melanjutkan pembayaran untuk ${productName} seharga Rp ${totalCost.toLocaleString('id-ID')}. Nomor Transaksi: ${transactionNumber}`;
+                
+                // Create WhatsApp URL
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                
+                // Redirect to WhatsApp
+                window.location.href = whatsappUrl;
+            });
+        });
+    </script>
 </body>
 </html>

@@ -16,7 +16,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding-top: 80px;
-  }
+}
 
 /* .navbar {
     display: flex;
@@ -68,7 +68,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #1ba0e2; /* Warna biru saat hover */
+    color: #fabc03; /* Warna biru saat hover */
   }
 
 .nav-links .active {
@@ -109,9 +109,9 @@ body {
 }
 
 .carousel-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    width: 100%; /* Pastikan gambar mengisi seluruh lebar */
+    height: 100%; /* Pastikan gambar mengisi seluruh tinggi */
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
 }
 
 .carousel-prev, .carousel-next {
@@ -273,42 +273,6 @@ body {
     color: #666;
     cursor: pointer;
     transition: color 0.3s ease;
-}
-
-/* Pagination */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    gap: 10px;
-}
-
-.pagination-btn {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #f89808;
-    color: #333;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid #ddd;
-    text-decoration: none; /* Hapus garis bawah pada link */
-}
-
-.pagination-btn.active {
-    background-color: #1ba0e2;
-    color: white;
-}
-
-.pagination-btn:hover{
-    background-color: #1ba0e2;
-    color: white;
-    border-color: #f89808;
 }
 
 /* Footer CSS */
