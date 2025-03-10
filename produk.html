@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- <link rel="stylesheet" href="styles\page.css" /> -->
-    <link rel="stylesheet" href="styles\produk.css" />
+    <link rel="stylesheet" href="styles\produk_style.css" />
 
     <title>Produk</title>
 </head>
     <!-- Body Start -->
 <body>
-     <!-- Ini navbar ngambil  -->
-     <nav class="navbar">
+<!-- Ini navbar ngambil  -->
+    <nav class="navbar">
         <img src="/img/Campus Mart.jpg" alt="Logo" />
         <div class="nav-links">
-          <a href="beranda.html">BERANDA</a>
-          <a href="produk.html" class="active">PRODUK</a>
-          <a href="login.html">AKUN</a>
-          <a href="kontak.html">KONTAK</a>
+        <a href="beranda.html">BERANDA</a>
+        <a href="produk.html" class="active">PRODUK</a>
+        <a href="login.html">AKUN</a>
+        <a href="kontak.html">KONTAK</a>
         </div>
-      </nav>
-      <!-- Akhir dari Navbar -->
+    </nav>
+<!-- Akhir dari Navbar -->
     
     <div class="carousel-container">
         <div class="carousel">
             <div class="carousel-slides">
                 <div class="carousel-slide">
-                    <img src="/img/caro1.jpg" alt="Promo 1">
+                    <img src="/img/caro1.jpg" alt="Ganbar 1">
                 </div>
                 <div class="carousel-slide">
-                    <img src="/img/caro2.jpg" alt="Promo 2">
+                    <img src="/img/caro2.jpg" alt="Gambar 2">
                 </div>
                 <div class="carousel-slide">
-                    <img src="/img/caro3.jpeg" alt="Promo 3">
+                    <img src="/img/caro3.jpg" alt="Gambar 3">
                 </div>
             </div>
             <button class="carousel-prev" id="prevBtn">
@@ -132,7 +132,7 @@
                     <img src="img/product6.jpeg" alt="Tas Selempang Bekas">
                 </div>
                 <div class="product-info">
-                    <h3 class="product-name">Tas Selempang"</h3>
+                    <h3 class="product-name">Tas Selempang</h3>
                     <p class="product-price">Rp 80.000</p>
                     <p class="product-description">Digunakan ±2 tahun, jahitan masih kuat meski resleting agak seret.</p>
                     <div class="product-actions">
@@ -147,7 +147,7 @@
                 </div>
                 <div class="product-info">
                     <h3 class="product-name">Laptop ASUS ROG</h3>
-                    <p class="product-price">Rp 5.500.000</p>
+                    <p class="product-price">Rp 2.500.000</p>
                     <p class="product-description">Laptop gaming bekas kondisi 90%, RAM 16GB, SSD 512GB.</p>
                     <div class="product-actions">
                         <button class="view-btn">Beli</button></div>
@@ -161,7 +161,7 @@
                 </div>
                 <div class="product-info">
                     <h3 class="product-name">Samsung Galaxy S21</h3>
-                    <p class="product-price">Rp 3.200.000</p>
+                    <p class="product-price">Rp 1.200.000</p>
                     <p class="product-description">HP bekas pemakaian 1 tahun, kondisi mulus, RAM 8GB.</p>
                     <div class="product-actions">
                         <button class="view-btn">Beli</button></div>
@@ -197,21 +197,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Pagination -->
-    <div class="pagination">
-        <!-- <div class="pagination-btn active">1</div>
-        <div class="pagination-btn">2</div>
-        <div class="pagination-btn">
-            <i data-feather="chevron-right"></i>
-        </div> -->
-        <a href="product.html" class="pagination-btn active">1</a>
-        <a href="product-2.html" class="pagination-btn">2</a>
-        <a href="product-2.html" class="pagination-btn">
-            <i data-feather="chevron-right"></i>
-        </a>
-    </div>
-    <!-- Body End -->
+<!-- Body End -->
 
     <!-- Footer -->
     <footer class="footer">
@@ -244,8 +230,7 @@
                 <h3>Hubungi Kami</h3>
                 <div class="contact-item">
                     <i data-feather="map-pin"></i>
-                    <!-- <span>Jl. Kampus Baru No. 123, Yogyakarta, Indonesia</span>
-                 -->
+                    <!-- <span>Jl. Kampus Baru No. 123, Yogyakarta, Indonesia</span>-->
                     <span>
                         <a href="https://goo.gl/maps/sKHTsvF1Ukx" 
                             target="_blank" 
@@ -266,26 +251,17 @@
                     <i data-feather="clock"></i>
                     <span>Senin - Jumat: 09:00 - 17:00</span>
                 </div>
-            </div>
-            
-            <!-- Newsletter Section -->
-            <div class="footer-section newsletter-section">
-                <h3>Berlangganan</h3>
-                <p>Dapatkan info terbaru dan promo spesial dari CampusMart langsung ke email Anda.</p>
-                <form>
-                    <input type="email" placeholder="Email Anda" required>
-                    <button type="submit">Berlangganan</button>
-                </form>
-            </div>
+            </div>   
         </div>
         
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <p>&copy; 2025 CampusMart | Semua Hak Dilindungi | Dari Mahasiswa, Oleh
-                Mahasiswa, Untuk Mahasiswa</p>
+            Mahasiswa, Untuk Mahasiswa</p>
         </div>
     </footer>
 
+    <!-- INI JAVASCRIPT -->
     <script>
         // Initialize Feather icons
         document.addEventListener('DOMContentLoaded', function() {
@@ -384,6 +360,21 @@
                 });
             });
         });
+
+    // Add click handlers to all "Beli" buttons
+            const buyButtons = document.querySelectorAll('.view-btn');
+            buyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Get product details from the parent card
+                    const productCard = this.closest('.product-card');
+                    const productName = productCard.querySelector('.product-name').textContent;
+                    const productPrice = productCard.querySelector('.product-price').textContent;
+                    const productImage = productCard.querySelector('.product-image img').src;
+                    
+                    // Redirect to checkout page with product details as URL parameters
+                    window.location.href = `checkout.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&image=${encodeURIComponent(productImage)}`;
+                });
+            });
     </script>
 </body>
 </html>
