@@ -8,14 +8,12 @@
     />
     <title>Login Campus Mart</title>
     <link rel="stylesheet" href="/styles/page.css" />
-    <link rel="stylesheet" href="/styles/produk.css" />
-    <link rel="stylesheet" href="/styles/produk_style.css" />
-    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <img src="/img/Campus Mart.jpg" alt="Logo" />
+      <img src="img\CampusMart.jpg" alt="Logo" />
       <div class="nav-links">
         <a href="beranda.html">BERANDA</a>
         <a href="produk.html">PRODUK</a>
@@ -228,5 +226,28 @@
         </div>
       </div>
     </footer>
+    <!-- Script untuk ngirim data ke backendnya -->
+    <script>
+      document.querySelector("button[type='submit']").addEventListener("click", function(event) {
+        event.preventDefault(); // Mencegah submit default
+    
+        let formData = new FormData();
+        formData.append("username", document.getElementById("username").value);
+        formData.append("password", document.getElementById("password").value);
+    
+        fetch("service\login.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message); // Menampilkan pesan
+            if (data.status === "success") {
+                window.location.href = data.redirect; // Redirect ke beranda jika berhasil
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    });
+    </script>
   </body>
 </html>
