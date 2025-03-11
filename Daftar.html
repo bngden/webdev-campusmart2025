@@ -124,77 +124,81 @@
         </div>
       </form>
     </div>
-
-
-        <!-- Footer -->
-        <footer class="footer">
-          <div class="footer-content">
-              <!-- About Section -->
-              <div class="footer-section about-section">
-                  <h3>Tentang Campus Mart</h3>
-                  <p>Campus Mart adalah platform jual-beli online yang dibuat khusus untuk mahasiswa yang ingin menjual barang yang sudah tidak terpakai tetapi masih memiliki nilai guna/layak pakai.</p>
-                  <div class="social-icons">
-                      <a href="#"><i data-feather="facebook"></i></a>
-                      <a href="#"><i data-feather="twitter"></i></a>
-                      <a href="#"><i data-feather="instagram"></i></a>
-                      <a href="#"><i data-feather="youtube"></i></a>
-                  </div>
-              </div>
-            <!-- Quick Links Section -->
-            <div class="footer-section links-section">
-              <h3>Link Cepat</h3>
-              <ul>
-                  <li><a href="beranda.html"><i data-feather="chevron-right"></i> Beranda</a></li>
-                  <li><a href="produk.html"><i data-feather="chevron-right"></i> Produk</a></li>
-                  <li><a href="login.html"><i data-feather="chevron-right"></i> Akun</a></li>
-                  <li><a href="kontak.html"><i data-feather="chevron-right"></i> Kontak</a></li>
-                  </ul>
+    
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+      <!-- About Section -->
+      <div class="footer-section about-section">
+          <h3>Tentang Campus Mart</h3>
+          <p>Campus Mart adalah platform jual-beli online yang dibuat khusus untuk mahasiswa yang ingin menjual barang yang sudah tidak terpakai tetapi masih memiliki nilai guna/layak pakai.</p>
+          <div class="social-icons">
+              <a href="#"><i data-feather="facebook" class="feather-icon"></i></a>
+              <a href="#"><i data-feather="twitter" class="feather-icon"></i></a>
+              <a href="#"><i data-feather="instagram" class="feather-icon"></i></a>
+              <a href="#"><i data-feather="youtube" class="feather-icon"></i></a>
           </div>
-          
-          <!-- Contact Section -->
-          <div class="footer-section contact-section">
-              <h3>Hubungi Kami</h3>
-              <div class="contact-item">
-                  <i data-feather="map-pin"></i>
-                  <span>
-                      <a href="https://goo.gl/maps/sKHTsvF1Ukx" 
-                          target="_blank" 
-                          class="contact-link">
-                          Jl. Siliwangi (Ringroad Utara), Jombor, Sleman, D.I. Yogyakarta 55285
-                      </a>
-                  </span>
-              </div>
-              <div class="contact-item">
-                  <i data-feather="phone"></i>
-                  <span><a href="https://wa.me/6285642504281" target="_blank" class="contact-link">+62 8564 2504 281</a></span>
-              </div>
-              <div class="contact-item">
-                  <i data-feather="mail"></i>
-                  <span>info@campusmart.id</span>
-              </div>
-              <div class="contact-item">
-                  <i data-feather="clock"></i>
-                  <span>Senin - Jumat: 09:00 - 17:00</span>
-              </div>
-          </div>   
       </div>
       
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-          <p>&copy; 2025 CampusMart | Semua Hak Dilindungi | Dari Mahasiswa, Oleh
-          Mahasiswa, Untuk Mahasiswa</p>
+      <!-- Quick Links Section -->
+      <div class="footer-section links-section">
+          <h3>Link Cepat</h3>
+          <ul>
+              <li><a href="beranda.html"><i data-feather="chevron-right" class="feather-icon-link"></i><span>Beranda</span></a></li>
+              <li><a href="produk.html"><i data-feather="chevron-right" class="feather-icon-link"></i><span>Produk</span></a></li>
+              <li><a href="login.html"><i data-feather="chevron-right" class="feather-icon-link"></i><span>Akun</span></a></li>
+              <li><a href="kontak.html"><i data-feather="chevron-right" class="feather-icon-link"></i><span>Kontak</span></a></li>
+          </ul>
       </div>
-  </footer>
+      
+      <!-- Contact Section -->
+      <div class="footer-section contact-section">
+          <h3>Hubungi Kami</h3>
+          <div class="contact-item">
+              <i data-feather="map-pin" class="feather-icon-contact"></i>
+              <span>
+                  <a href="https://goo.gl/maps/sKHTsvF1Ukx" 
+                      target="_blank" 
+                      class="contact-link">
+                      Jl. Siliwangi (Ringroad Utara), Jombor, Sleman, D.I. Yogyakarta 55285
+                  </a>
+              </span>
+          </div>
+          <div class="contact-item">
+              <i data-feather="phone" class="feather-icon-contact"></i>
+              <span><a href="https://wa.me/6285642504281" target="_blank" class="contact-link">+62 8564 2504 281</a></span>
+          </div>
+          <div class="contact-item">
+              <i data-feather="mail" class="feather-icon-contact"></i>
+              <span>info@campusmart.id</span>
+          </div>
+          <div class="contact-item">
+              <i data-feather="clock" class="feather-icon-contact"></i>
+              <span>Senin - Jumat: 09:00 - 17:00</span>
+          </div>
+      </div>   
+  </div>
+  
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+      <p>&copy; 2025 CampusMart | Semua Hak Dilindungi | Dari Mahasiswa, Oleh
+      Mahasiswa, Untuk Mahasiswa</p>
+  </div>
+</footer>
 
+<!-- Script untuk Feather Icons -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      feather.replace();
+  });
+    
     <!-- JavaScript untuk Kalender -->
-    <script>
-      document
+    document
         .querySelector(".calendar-icon")
         .addEventListener("click", function () {
           document.getElementById("tanggal-lahir").focus();
           document.getElementById("tanggal-lahir").showPicker();
         });
-        
     </script>
   </body>
 </html>
