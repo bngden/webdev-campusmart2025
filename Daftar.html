@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/styles/page.css" />
     <link rel="stylesheet" href="/styles/date-picker.css" />
     <link rel="stylesheet" href="/styles/ikon.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/styles/footer_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
   <body>
@@ -123,52 +125,66 @@
       </form>
     </div>
 
-    <!-- Footer Area -->
-    <footer class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="single-footer-widget">
-              <h6>Tentang Kami</h6>
-              <p>
-                Campus Mart adalah platform jual-beli online yang dibuat khusus 
-                untuk mahasiswa yang ingin menjual barang yang sudah tidak <br>
-                terpakai tetapi masih memiliki nilai guna/layak pakai.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="single-footer-widget mail-chimp">
-              <h6 class="mb-20">Pembayaran</h6>
-              <ul class="instafeed d-flex">
-                <li><img src="/img/tam1.jpg" alt="" /></li>j
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 col-sm-6">
-            <div class="single-footer-widget">
-              <h6>Media Sosial</h6>
-              <p>Ikuti Kami</p>
-              <div class="footer-social d-flex align-items-center">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
-                <a href="#"><i class="fab fa-behance"></i></a>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-content">
+              <!-- About Section -->
+              <div class="footer-section about-section">
+                  <h3>Tentang Campus Mart</h3>
+                  <p>Campus Mart adalah platform jual-beli online yang dibuat khusus untuk mahasiswa yang ingin menjual barang yang sudah tidak terpakai tetapi masih memiliki nilai guna/layak pakai.</p>
+                  <div class="social-icons">
+                      <a href="#"><i data-feather="facebook"></i></a>
+                      <a href="#"><i data-feather="twitter"></i></a>
+                      <a href="#"><i data-feather="instagram"></i></a>
+                      <a href="#"><i data-feather="youtube"></i></a>
+                  </div>
               </div>
-            </div>
+            <!-- Quick Links Section -->
+            <div class="footer-section links-section">
+              <h3>Link Cepat</h3>
+              <ul>
+                  <li><a href="beranda.html"><i data-feather="chevron-right"></i> Beranda</a></li>
+                  <li><a href="produk.html"><i data-feather="chevron-right"></i> Produk</a></li>
+                  <li><a href="login.html"><i data-feather="chevron-right"></i> Akun</a></li>
+                  <li><a href="kontak.html"><i data-feather="chevron-right"></i> Kontak</a></li>
+                  </ul>
           </div>
-        </div>
-        <div class="footer-bottom">
-          <p class="footer-text">
-            Campus Mart &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            Website Campus Mart
-          </p>
-        </div>
+          
+          <!-- Contact Section -->
+          <div class="footer-section contact-section">
+              <h3>Hubungi Kami</h3>
+              <div class="contact-item">
+                  <i data-feather="map-pin"></i>
+                  <span>
+                      <a href="https://goo.gl/maps/sKHTsvF1Ukx" 
+                          target="_blank" 
+                          class="contact-link">
+                          Jl. Siliwangi (Ringroad Utara), Jombor, Sleman, D.I. Yogyakarta 55285
+                      </a>
+                  </span>
+              </div>
+              <div class="contact-item">
+                  <i data-feather="phone"></i>
+                  <span><a href="https://wa.me/6285642504281" target="_blank" class="contact-link">+62 8564 2504 281</a></span>
+              </div>
+              <div class="contact-item">
+                  <i data-feather="mail"></i>
+                  <span>info@campusmart.id</span>
+              </div>
+              <div class="contact-item">
+                  <i data-feather="clock"></i>
+                  <span>Senin - Jumat: 09:00 - 17:00</span>
+              </div>
+          </div>   
       </div>
-    </footer>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+          <p>&copy; 2025 CampusMart | Semua Hak Dilindungi | Dari Mahasiswa, Oleh
+          Mahasiswa, Untuk Mahasiswa</p>
+      </div>
+  </footer>
 
     <!-- JavaScript untuk Kalender -->
     <script>
@@ -178,6 +194,7 @@
           document.getElementById("tanggal-lahir").focus();
           document.getElementById("tanggal-lahir").showPicker();
         });
+        
     </script>
   </body>
 </html>
