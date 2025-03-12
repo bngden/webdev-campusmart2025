@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['iduser'] = $iduser;
             $_SESSION['nama'] = $nama;
             
-            echo json_encode(["status" => "success", "message" => "Login berhasil!", "redirect" => "beranda.html"]);
+            echo json_encode(["status" => "success", "message" => "Login berhasil!", "redirect" => "../beranda.html"]);
         } else {
             echo json_encode(["status" => "error", "message" => "Password salah!"]);
         }

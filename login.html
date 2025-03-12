@@ -7,10 +7,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Login Campus Mart</title>
-    <link rel="stylesheet" href="/styles/page.css" />
-    <link rel="stylesheet" href="/styles/produk.css" />
-    <link rel="stylesheet" href="/styles/produk_style.css" />
-    <link rel="stylesheet" href="/styles/footer_style.css">
+    <link rel="stylesheet" href="styles\page.css" />
+    <link rel="stylesheet" href="styles\produk.css" />
+    <link rel="stylesheet" href="styles\produk_style.css" />
+    <link rel="stylesheet" href="styles\footer_style.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   </head>
@@ -27,7 +27,8 @@
     </nav>
 
     <!-- Login Container -->
-    <div class="auth-container">
+    <div class="auth-container" >
+        <form id="form-login" action = "service\login.php" method = "post">
       <h1>Campus Mart</h1>
       <p><b>Barang Bekas, Manfaat Tak Terbatas!</b></p>
         <div class="input-group">
@@ -55,7 +56,7 @@
           <label for="remember">Ingat saya</label>
         </div>
         <br>
-        <button type="submit">Log In</button>
+        <button type="submit" >Log In</button>
 
         <div class="link-container">
           <a href="Daftar.html" class="link">Buat Akun</a>
@@ -223,7 +224,7 @@
       </div>
     </footer>
     <!-- Script untuk ngirim data ke backendnya -->
-    <script>
+    <!-- <script>
       document.querySelector("button[type='submit']").addEventListener("click", function(event) {
         event.preventDefault(); // Mencegah submit default
     
@@ -244,6 +245,6 @@
         })
         .catch(error => console.error("Error:", error));
     });
-    </script>
+    </script> -->
   </body>
 </html>
